@@ -14,4 +14,4 @@ jobs:
       - run: curl -L -s https://releases.hashicorp.com/packer/1.5.5/packer_1.5.5_linux_amd64.zip -o /go/bin/packer.zip && unzip /go/bin/packer.zip -d /go/bin && chmod +x /go/bin/packer
       - run: curl -L -s https://releases.hashicorp.com/terraform/0.12.24/terraform_0.12.24_linux_amd64.zip -o /go/bin/terraform.zip && unzip /go/bin/terraform.zip -d /go/bin && chmod +x /go/bin/terraform
       - run: pwd
-      - run: cd ./terraform/projects/myvpn/ && pwd && ls && terraform init && terraform valdiate && terraform plan -out=plans/test.tfplan
+      - run: cd ./terraform/projects/myvpn/ && pwd && ls && terraform init && terraform validate && terraform plan -out=plans/test.tfplan
