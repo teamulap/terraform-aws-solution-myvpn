@@ -20,6 +20,6 @@ module "ec2" {
                             ManagedBy = "jcbagtas"
                             SomeTag = "SomeValue"
                         }
-    ssh_public_key      = "${file("~/.ssh/id_rsa.pub")}"
+    ssh_public_key      = "${get_env("ID_RSA")}"
     user_data           = "${file("./scripts/startup.sh")}"
 }
