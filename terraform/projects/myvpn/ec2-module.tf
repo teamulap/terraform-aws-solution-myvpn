@@ -1,5 +1,5 @@
 module "ec2" {
-    source = "git@github.com:teamulap/terraform-aws-module-ec2.git//terraform/modules?ref=v0.0.1"
+    source = "git@github.com:teamulap/terraform-aws-module-ec2.git//terraform/modules?ref=v0.0.2"
     region              = "ap-northeast-1"
     subnet_id           = "${module.vpc.subnet_ids[0]}"
     security_group_ids  = ["${module.sg.security_group_id}"]
